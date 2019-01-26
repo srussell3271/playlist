@@ -1,7 +1,7 @@
 /* global $ */
 
 // BELOW Update the songs array with four of your favorites songs.
-var songs = [];
+var song = [];
 var artist = [];
 var songLength = [];
 var image = [];
@@ -27,7 +27,6 @@ function emptySongInfo(){
 
 function addSongInfo(){
     // BELOW write the code to add new items to each of the arrays.
-    $('#add').click(function() {
         var songs = $('#song').val();
         var artists = $('#artist').val();
         var songlengths = $('#length').val();
@@ -36,31 +35,37 @@ function addSongInfo(){
 
         song.push(songs);
         artist.push(artists);
-        length.push(songlength);
-        songlengths.push(length);
-        images.push(image);
-        songLinks.push(link);
+        songLength.push(length);
+        image.push(image);
+        songLink.push(link);
 
         console.log(song);
         console.log(artist);
-        console.log(length);
         console.log(songlengths);
         console.log(images);
         console.log(songLinks);
 
     for (var i = 0; i < song.length; i++){
-        $("#song").append("<li>" + song[i] + "</li>");
+        $("#song").append("<li class= 'song'>" + song[i] + "</li>");
     }
     for (var i = 0; i < artist.length; i++){
-        $("#artist").append("<li>" + artist[i] + "</li>");
+        $("#artist").append("<li class= 'artist'>" + artist[i] + "</li>");
     }
     for (var i = 0; i < length.length; i++){
-        $("#length").append("<li>" + length[i] + "</li>");
+        $("#length").append("<li class= 'length'>" + length[i] + "</li>");
     }
-// $("#add").click(function() {
-//     emptySongInfo();
-//     addSongInfo();
-//     displaySongInfo();
-// });
+    // for (var i = 0; i < image.length; i++){
+    // }
+}
+function displaySongInfo(){
+    
+}
 
-// displaySongInfo();
+$("#add").click(function() {
+    addSongInfo();
+    displaySongInfo();
+    emptySongInfo();
+
+});
+
+displaySongInfo();
