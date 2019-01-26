@@ -28,22 +28,23 @@ function emptySongInfo(){
     // Use jQuery to empty all of the remaining divs
 
 function displaySongInfo(){
-    image.forEach(function(images) {
-        $("#images").append("<img src='" + image + "'>");   
-    });
-    song.forEach(function(songs) {
-        $("#songs").append("<li class= 'song'>" + song + "</li>");
-    });
-    artist.forEach(function(artists) {
-        $("#artists").append("<li class= 'artist'> By~ " + artist + "</li>");   
-    });
+    for(var i = 0; i<image.length; i++){
 
-    length.forEach(function(lengths) {
+        $("#images").append("<img src='" + image[i] + "'>");   
+    }
+    
+    for(var i = 0; i<song.length; i++){
+        $("#songs").append("<li class= 'song'>" + song[i] + "</li>");
+    }
+    for(var i = 0; i<artist.length; i++){
+        $("#artists").append("<li class= 'artist'> By~ " + artist[i] + "</li>"); 
+    }
+    for(var i = 0; i<length.length; i++){
         $("#lengths").append("<li class= 'length'>" + length + "</li>"); 
-    });
-    links.forEach(function(link) {
+    }
+    for(var i = 0; i<link.length; i++){
         $("#links").append("<li class= 'link'> <a href='" + link + "'> Play Song~ </a> </li>"); 
-    });
+    }
 
 }
 

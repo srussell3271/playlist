@@ -21,20 +21,20 @@ h1 {
     margin: 20px;
 }
 
-#songs p {
+#songs {
     font-size: 18px;
     height: 100px;
     font-weight: bold;
     margin: 20px;
 }
 
-#artists p {
+#artists{
     font-size: 18px;
     height: 100px;
     margin: 20px;
 }
 
-#lengths p {
+#lengths {
     font-size: 16px;
     height: 100px;
     margin: 20px;
