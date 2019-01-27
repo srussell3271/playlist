@@ -39,8 +39,8 @@ function displaySongInfo(){
     for(var i = 0; i<artist.length; i++){
         $("#artists").append("<li class= 'artist'> By~ " + artist[i] + "</li>"); 
     }
-    for(var i = 0; i<length.length; i++){
-        $("#lengths").append("<li class= 'length'>" + length + "</li>"); 
+    for(var i = 0; i<songLength.length; i++){
+        $("#lengths").append("<li class= 'length'>" + length[i] + "</li>"); 
     }
     for(var i = 0; i<link.length; i++){
         $("#links").append("<li class= 'link'> <a href='" + link + "'> Play Song~ </a> </li>"); 
