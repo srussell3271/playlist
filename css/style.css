@@ -1,4 +1,12 @@
+.text {
+    background: -webkit-linear-gradient(#f00, #ff9a00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:-1px 0 black, 0 1px #f00, 1px 0 black, 0 4px #ff9a00 ;
+}
+
 h1 {
+    background: -webkit-linear-gradient(#ff9a00, #f00);
     text-align: center;
 }
 
@@ -17,36 +25,43 @@ h1 {
 #images img {
     display: block;
     height: 100px;
-    width: auto;
+    width: 100px;
     margin: 20px;
 }
 
-#songs {
-    font-size: 18px;
+#songs li {
+    display: block;
+    font-size: 20px;
     height: 100px;
     font-weight: bold;
     margin: 20px;
 }
 
-#artists{
-    font-size: 18px;
-    height: 100px;
-    margin: 20px;
-}
-
-#lengths {
-    font-size: 16px;
-    height: 100px;
-    margin: 20px;
-    text-align: right;
-}
-
-#links a {
+#lengthss li {
     display: block;
     font-size: 18px;
     height: 100px;
     font-weight: bold;
     margin: 20px;
+    color: red;
+}
+
+#linkss a {
+    display: block;
+    font-size: 18px;
+    height: 100px;
+    font-weight: bold;
+    margin: 20px;
+    color: skyBlue;
+}
+
+#artistss li {
+    display: block;
+    font-size: 20px;
+    height: 100px;
+    font-weight: bold;
+    margin: 20px;
+    color: green;
 }
 
 #form {
@@ -64,6 +79,7 @@ button {
     font-size: 14px;
     padding: 5px 10px;
 }
-body{
-    color:purple;
+
+body {
+    background-color: #fff6aa;
 }

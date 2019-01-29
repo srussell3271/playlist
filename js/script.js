@@ -18,32 +18,31 @@ var songLink = ["https://www.youtube.com/watch?v=yw04QD1LaB0",
 
  
 function emptySongInfo(){
-    $("#songs").empty();
-    $("#artist").empty();
-    $("#length").empty();
-    $("#image").empty();
-    $("#link").empty();
+    $("#songss").empty();
+    $("#artistss").empty();
+    $("#lengthss").empty();
+    $("#imagess").empty();
+    $("#linkss").empty();
 }
     
     // Use jQuery to empty all of the remaining divs
 
 function displaySongInfo(){
     for(var i = 0; i<image.length; i++){
-
-        $("#images").append("<img src='" + image[i] + "'>");   
+        $("#imagess").append("<img src='" + image[i] + "'>");   
     }
     
     for(var i = 0; i<song.length; i++){
-        $("#songs").append("<li class= 'song'>" + song[i] + "</li>");
+        $("#songss").append("<li class= 'song'>" + song[i] + "</li>");
     }
     for(var i = 0; i<artist.length; i++){
-        $("#artists").append("<li class= 'artist'> By~ " + artist[i] + "</li>"); 
+        $("#artistss").append("<li class= 'artist'> By~ " + artist[i] + "</li>"); 
     }
     for(var i = 0; i<songLength.length; i++){
-        $("#lengths").append("<li class= 'length'>" + length[i] + "</li>"); 
+        $("#lengthss").append("<li class= 'lengthing'>" + songLength[i] + "</li>"); 
     }
-    for(var i = 0; i<link.length; i++){
-        $("#links").append("<li class= 'link'> <a href='" + link + "'> Play Song~ </a> </li>"); 
+    for(var i = 0; i<songLink.length; i++){
+        $("#linkss").append("<li class= 'link'> <a href='" + songLink[i] + "'> Play Song~ </a> </li>"); 
     }
 
 }
@@ -56,13 +55,18 @@ $("#add").click(function() {
         var songLinks =  $('#link').val();
 
         song.push(songs);
+        console.log(songs);
         artist.push(artists);
-        length.push(songLengths);
+        console.log(artists);
+        songLength.push(songlengths);
+        console.log(songLength);
         image.push(images);
-        link.push(songLinks);
+        console.log(images);
+        songLink.push(songLinks);
+        console.log(songLinks);
 
-    displaySongInfo();
     emptySongInfo();
+    displaySongInfo();
 
 });
 
